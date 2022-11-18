@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/22031af03d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="movie.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar bar">
+      <div class="nav__content--wrapper">
+        <div class="logo">
+          <figure>
+            <img
+              src="https://dev.d24jig8s1lr7n9.amplifyapp.com/img/whitelogo.39850b27.png"
+              alt=""
+              class="logo__img"
+            />
+          </figure>
+        </div>
+        <div class="links nav__links">
+          <a
+            href="./index.html"
+            class="link link__hover-effect link__hover-effect--white white"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="link link__hover-effect link__hover-effect--white white"
+            >Find your movie</a
+          >
+          <button class="contact__movie">CONTACT</button>
+        </div>
+      </div>
+      <div class="content__wrapper">
+        <h1 class="movie">Browse our movies</h1>
+        <div class="input__wrapper wrap">
+          <input
+            class="movie__input search__movie"
+            placeholder="Search by Title"
+            type="text"
+            onkeyup="searchInput(event)"
+          />
+          <div class="search__wrapper" onclick="searchBtn()">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <section id="movies">
+      <div class="container">
+        <div class="row__movies">
+          <div class="search__filter">
+            <h2 class="search">Search Results for :</h2>
+          </div>
+          <div class="movie__cards">
+            <div id="card">
+              <i class="fa-solid fa-spinner loading__state--spinner"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
